@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Order Aplikasi</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('bgmarket.gif');
+      padding: 20px;
+      background-position: center;
+      background-repeat: no-repeat;
+      
+    }
+    
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: #1e1e2e;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 255, 170, 0.1);
+    }
+
+    .container h4 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00ffc8;
+    }
+
+    .member {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #2c2c3e;
+      padding: 12px 18px;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .member:hover {
+      background: #383854;
+    }
+
+    .member-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .status-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .online {
+      background-color: #4caf50;
+      box-shadow: 0 0 8px #4caf50;
+    }
+
+    .offline {
+      background-color: #f44336;
+      box-shadow: 0 0 8px #f44336;
+    }
+
+    .name {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .status-text {
+      font-size: 13px;
+      font-style: italic;
+      color: #aaa;
+    }
+
+    .container {
+      background: #00000080;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #555;
+    }
+
+    input, select {
+      width: 90%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    input:focus, select:focus {
+      border-color: #4caf50;
+      outline: none;
+      box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #4caf50;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+    }
+    
+    .syarat-box {
+      background: #0affff50;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .syarat-box h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .syarat-box ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .checkbox-container input[type="checkbox"] {
+      display: none;
+    }
+
+    .checkmark {
+      height: 10px;
+      width: 20px;
+      background-color: #eee;
+      border-radius: 5px;
+      display: inline-block;
+      margin-right: 10px;
+      position: relative;
+    }
+
+    .checkbox-container input:checked + .checkmark {
+      background-color: #4CAF50;
+    }
+
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    .checkbox-container input:checked + .checkmark:after {
+      display: block;
+    }
+
+    .checkbox-container .checkmark:after {
+      left: 6px;
+      top: 2px;
+      width: 5px;
+      height: 10px;
+      border: solid black;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    .checkbox-text {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="container">
+    <h4>Status Member</h4>
+
+  <div class="member">
+    <div class="member-info">
+      <div class="status-dot online"></div>
+      <div class="name">Member Seller</div>
+    </div>
+    <div class="status-text">👤 1198 user</div>
+  </div>
+
+  <div class="member">
+    <div class="member-info">
+      <div class="status-dot offline"></div>
+      <div class="name">Member Seller</div>
+    </div>
+    <div class="status-text">👤 10K+ user</div>
+  </div>
+
+  <div class="member">
+    <div class="member-info">
+      <div class="status-dot online"></div>
+      <div class="name">Member Affiliate</div>
+    </div>
+    <div class="status-text">👤 1266 user</div>
+  </div>
+
+  <div class="member">
+    <div class="member-info">
+      <div class="status-dot offline"></div>
+      <div class="name">Member Affiliate</div>
+    </div>
+    <div class="status-text">👤 10K+ user</div>
+  </div>
+    <h2>Form Request Order</h2>
+    <h2>MULTI BOOSTER</h2>
+    <form id="orderForm">
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="nomor">Nomor HP (format 62):</label>
+      <input type="tel" id="nomor" name="nomor" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="produk">Nama Produk:</label>
+      <input type="text" id="produk" name="produk" required>
+      
+      <label for="payment">Estimasi payment:</label>
+      <input type="payment" id="payment" name="payment" required>
+
+      <label for="metode">Metode Pembayaran:</label>
+      <select id="metode" name="metode" required>
+        <option value="">-- Pilih Metode --</option>
+        <option value="Transfer Bank">Transfer Bank</option>
+        <option value="E-Wallet (OVO, Dana, dll)">E-Wallet (OVO, Dana, dll)</option>
+        <option value="COD (Bayar di Tempat)">QRIS</option>
+      </select>
+      <br><br>
+<div class="syarat-box">
+  <h3>Syarat dan Ketentuan</h3>
+  <ul>
+    <li>Pesanan tidak dapat dibatalkan setelah pembayaran.</li>
+    <li>Pastikan data yang Anda isi sudah benar.</li>
+    <li>Produk akan dikirim sesuai estimasi yang telah ditentukan.</li>
+    <li>Pembayaran dilakukan sesuai metode yang dipilih.</li>
+  </ul>
+
+  <label class="checkbox-container">
+    <input type="checkbox" id="setuju" required>
+    <span class="checkmark"></span>
+    <span class="checkbox-text">Saya telah membaca dan menyetujui syarat dan ketentuan di atas</span>
+  </label>
+  </div>
+  <br>
+      <button type="submit">Order Sekarang</button>
+    </form>
+  </div>
+  
+  
+
+
+  <script>
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nama = document.getElementById('nama').value;
+      const nomor = document.getElementById('nomor').value;
+      const email = document.getElementById('email').value;
+      const produk = document.getElementById('produk').value;
+      const metode = document.getElementById('metode').value;
+      const metode = document.getElementById('payment').value;
+
+      const pesan = `Halo, saya ingin order tools multi booster:\n\nNama: ${nama}\nNomor HP: ${nomor}\nEmail: ${email}\nProduk: ${produk}\nMetode Pembayaran: ${metode}\npayment: ${metode}`;
+      
+      const noWA = "6281234567890"; // Ganti dengan nomor admin tujuan
+      const url = `https://wa.me/message/ACFTOT5WB76IL1${noWA}?text=${encodeURIComponent(pesan)}`;
+
+      window.open(url, '_blank');
+    });
+  </script>
+
+</body>
+</html>
